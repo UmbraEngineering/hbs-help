@@ -77,6 +77,6 @@ Allows if/else blocks with logical conditionals. This helper takes three argumen
 {{/cond}}
 ```
 
-It supports all the standard logical operators, plus and extra: `==`, `===`, `!=`, `!==`, `&&`, `||`, `^^` (thats a logical xor :D), `<`, `<=`, `>`, and `>=`.
+It supports all the standard logical operators, plus an extra: `==`, `===`, `!=`, `!==`, `&&`, `||`, `^^` (that's a logical xor :D), `<`, `<=`, `>`, and `>=`.
 
 
