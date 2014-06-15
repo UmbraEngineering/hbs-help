@@ -17,10 +17,10 @@ var hbsHelp = require('hbs-help');
 hbsHelp.use('env');
 
 // Load multiple helpers
-hbsHelp.use('env', 'logic');
+hbsHelp.use('env', 'iff');
 
 // Load multiple helpers with an array
-hbsHelp.use([ 'env', 'logic' ])
+hbsHelp.use([ 'env', 'iff' ])
 ```
 
 After calling the `use` method for a given helper, that helper will automatically be made available to your templates.
@@ -64,3 +64,19 @@ The second way is as a block helper, in which case it checks if the given value 
 <p>The current environment is development.</p>
 {{/env}}
 ```
+
+#### iff
+
+Allows if/else blocks with logical conditionals. This helper takes three arguments, and looks like this:
+
+```handlebars
+{{#iff foo "==" bar}}
+    Foo equals bar
+{{else}}
+    Foo does not equal bar
+{{/iff}}
+```
+
+It supports all the standard logical operators, plus and extra: `==`, `===`, `!=`, `!==`, `&&`, `||`, `^^` (thats a logical xor :D), `<`, `<=`, `>`, and `>=`.
+
+
